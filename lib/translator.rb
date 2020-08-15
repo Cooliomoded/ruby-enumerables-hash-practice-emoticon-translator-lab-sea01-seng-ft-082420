@@ -17,10 +17,11 @@ end
 #codes, the items in the emoticon_arrays pointed to by their expression_keys.
 #
 def get_japanese_emoticon(pathway, emoticon)
-  load_library(pathway)
+  pathway_hash = load_library(pathway)
   # code goes here
 end
 
 def get_english_meaning(library_path, emoticon)
+  load_library(library_path)
   # code goes here
 end
