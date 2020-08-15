@@ -9,7 +9,6 @@ def load_library(library)
         "english": emoticon_arrays[0],
         "japanese": emoticon_arrays[1]
       }
-      end
     end
     emoticon_hash
 end
@@ -19,7 +18,6 @@ end
 #
 def get_japanese_emoticon(pathway, emoticon)
   load_library(pathway)
-  new_library
   # code goes here
 end
 
