@@ -19,7 +19,7 @@ end
 #
 def get_japanese_emoticon(pathway, emoticon)
   load_library(pathway)
-  new_library 
+  new_library
   # code goes here
 end
 
