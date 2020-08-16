@@ -19,7 +19,7 @@ end
 #emoticon_array is a value of the key known as expression_keys, it is an array that holds
 #codes, the items in the emoticon_arrays pointed to by their expression_keys.
 #
-def get_japanese_emoticon(pathway, emoticon)
+def get_japanese_emoticon(file_path, emoticon)
   library = load_library(file_path)
   emoticon = library.keys.find do |key|
     library[key][:english] == emoticon
