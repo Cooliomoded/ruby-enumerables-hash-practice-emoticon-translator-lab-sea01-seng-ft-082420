@@ -42,7 +42,7 @@ def get_english_meaning(file_path, emoticon)
   emoticon = library.keys.find do |key|
     library[key][:japanese] == emoticon
   end
-  emoticon ? key : "Sorry, that emoticon was not found"
+  emoticon ? library : "Sorry, that emoticon was not found"
   # code goes here
 end
 #we want to compare the japanese value of the emoticon input, and return the
