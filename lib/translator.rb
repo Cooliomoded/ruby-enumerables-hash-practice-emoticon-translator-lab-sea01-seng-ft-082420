@@ -37,7 +37,12 @@ end
 #and return the value of the japanese key that shares the english key's value.
 
 
-def get_english_meaning(library_path, emoticon)
+def get_english_meaning(file_path, emoticon)
+  library = load_library(file_path)
+  emoticon = library.keys.find do |key|
+    library[key][:japanese] == emoticon
+  end
+  emoticon ? library[emoticon]
   # code goes here
 end
 #we want to compare the japanese value of the emoticon input, and return the
