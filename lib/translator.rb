@@ -38,7 +38,6 @@ end
 
 
 def get_english_meaning(library_path, emoticon)
-  library = load_library(library_path)
   # code goes here
 end
 #we want to compare the japanese value of the emoticon input, and return the
