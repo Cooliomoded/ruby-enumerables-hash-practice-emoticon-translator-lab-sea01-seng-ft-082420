@@ -12,16 +12,34 @@ def load_library(library)
     end
     emoticon_hash
 end
+#load_library structure
+  #emoticon_hash{expression_keys: {languages: emoticons}}
+  
 #expression_keys are the library_hash :keys, their values point to an array, we are calling
 #emoticon_array is a value of the key known as expression_keys, it is an array that holds
 #codes, the items in the emoticon_arrays pointed to by their expression_keys.
 #
 def get_japanese_emoticon(pathway, emoticon)
-  pathway_hash = load_library(pathway)
-  # code goes here
+  library = load_library(file_path)
+  emoticon = library.keys.find do |key|
+    library[key][:english] == emoticon
+  end
+  emoticon ? library[emoticon][:japanese] : "Sorry, that emoticon was not found"
 end
 
+  # code goes here
+
+#with load_library our new pathway file has been organized as above. There will
+#be an emoticon_hash with expression_keys as keys, pointing to hashes
+#with two keys apiece, english and japanese. Those keys point to strings
+#of emoticons
+#we want to compare the inputted english emoticon with each value in expression_keys hashes,
+#and return the value of the japanese key that shares the english key's value.
+
+
 def get_english_meaning(library_path, emoticon)
-  load_library(library_path)
+  library = load_library(library_path)
   # code goes here
 end
+#we want to compare the japanese value of the emoticon input, and return the
+#
