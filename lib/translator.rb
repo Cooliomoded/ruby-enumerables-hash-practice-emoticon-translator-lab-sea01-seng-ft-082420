@@ -14,7 +14,7 @@ def load_library(library)
 end
 #load_library structure
   #emoticon_hash{expression_keys: {languages: emoticons}}
-  
+
 #expression_keys are the library_hash :keys, their values point to an array, we are calling
 #emoticon_array is a value of the key known as expression_keys, it is an array that holds
 #codes, the items in the emoticon_arrays pointed to by their expression_keys.
